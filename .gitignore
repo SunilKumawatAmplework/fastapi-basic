@@ -1,0 +1,111 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.pyd
+*.pyo
+
+# C extensions
+*.c
+*.cpp
+
+# ----------------------------
+# Virtual Environments
+# ----------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+
+# ----------------------------
+# Environment & Config
+# ----------------------------
+# Sensitive data (API keys, secrets, DB credentials)
+.env
+.env.*
+!.env.example  # keep template for new developers
+
+# ----------------------------
+# IDE / Editor files
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Logs & Cache
+# ----------------------------
+*.log
+*.tmp
+*.cache/
+logs/
+
+# ----------------------------
+# Testing & Coverage
+# ----------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# ----------------------------
+# Build / Packaging
+# ----------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+MANIFEST
+pip-wheel-metadata/
+
+# ----------------------------
+# Alembic / Migrations
+# ----------------------------
+# Keep migration scripts, but ignore cache and compiled files
+migrations/__pycache__/
+migrations/*.pyc
+# DO NOT ignore these:
+# !migrations/env.py
+# !migrations/versions/
+
+# If you have an old "alembic" folder (rename to migrations/ if needed)
+alembic/__pycache__/
+alembic/*.pyc
+# !alembic/env.py
+# !alembic/versions/
+
+# ----------------------------
+# OS / System Files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Docker
+# ----------------------------
+*.pid
+*.tar
+*.bak
+docker-compose.override.yml
+
+# ----------------------------
+# Database files (if using SQLite)
+# ----------------------------
+*.db
+*.sqlite3
+
+# ----------------------------
+# Misc
+# ----------------------------
+tmp/
+.cache/

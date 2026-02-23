@@ -1,0 +1,12 @@
+fastapi
+passlib 
+bcrypt
+pwdlib
+pwdlib[argon2]
+psycopg2-binary
+sqlmodel
+python-multipart
+python-jose
+python-dotenv
+pyjwt
+aiofiles
