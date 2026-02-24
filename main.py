@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, Request, status
 from router import blog_get
 from router import blog_post
@@ -40,6 +41,11 @@ def story_exception_handler(request: Request, exc: StoryException):
     )
 
 
-models.Base.metadata.create_all(engine)
+@app.on_event("startup")
+def on_startup():
+    models.Base.metadata.create_all(engine)
 
+
+# Ensure the files directory exists for static file serving
+os.makedirs("files", exist_ok=True)
 app.mount("/files", StaticFiles(directory="files"), name="files")
