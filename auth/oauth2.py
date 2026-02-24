@@ -1,3 +1,4 @@
+import os
 from fastapi.security import OAuth2PasswordBearer
 from fastapi import Depends, HTTPException, status
 from typing import Optional
@@ -12,7 +13,10 @@ from jose import JWTError
  
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
  
-SECRET_KEY = '388f1e5848edfc5232afb8805f0bf71c676aa22ba3571050d64e03b9bd4db32e'
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "388f1e5848edfc5232afb8805f0bf71c676aa22ba3571050d64e03b9bd4db32e"
+)
 ALGORITHM = 'HS256'
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
  
